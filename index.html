@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#642735">
+    <title>Happy Birthday MOHARANI ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="confetti"></div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-inner">
+                <p class="eyebrow">A little surprise for you ✨</p>
+                <h1>Happy Birthday, <span>MOHARANI</span> ❤️</h1>
+                <p class="hero-text">
+                    Today is all about celebrating you, the memories we've made,
+                    and all the beautiful moments still waiting for us.
+                </p>
+                <button class="main-btn" onclick="openWish()">Open Your Birthday Wish ✨</button>
+            </div>
+            <div class="scroll-hint">scroll to explore <span>↓</span></div>
+        </section>
+
+        <!-- WISH -->
+        <section class="wish-section" id="wish">
+            <div class="section-heading">
+                <p class="eyebrow dark">For You</p>
+                <h2>A Birthday Letter 💌</h2>
+            </div>
+
+            <div class="letter">
+                <div class="letter-top">With love, always</div>
+                <p>Happy Birthday! 🎂</p>
+                <p>
+                    May your day be filled with genuine smiles, warm hugs, peaceful
+                    moments and all the little things that make you happy.
+                </p>
+                <p>
+                    Thank you for being a beautiful part of my memories. I hope this
+                    new year of your life brings you closer to your dreams and gives
+                    you countless reasons to smile.
+                </p>
+                <p class="signature">Keep smiling ❤️</p>
+            </div>
+        </section>
+
+        <!-- MEMORY BALLOONS -->
+        <section class="balloon-section">
+            <div class="section-heading light">
+                <p class="eyebrow">Little moments</p>
+                <h2>Memory Balloons</h2>
+                <p>Click each balloon to reveal a hidden memory ❤️</p>
+            </div>
+
+            <div class="balloons" id="balloons">
+                <button class="balloon b1"
+                    data-memory="The first little moment that made us smile. ✨"><span>♥</span></button>
+                <button class="balloon b2"
+                    data-memory="Some memories are tiny, but they stay forever. 🌸"><span>♥</span></button>
+                <button class="balloon b3"
+                    data-memory="Every laugh made the ordinary feel special. 🥰"><span>♥</span></button>
+                <button class="balloon b4" data-memory="A beautiful day, a beautiful memory. ☁️"><span>♥</span></button>
+                <button class="balloon b5"
+                    data-memory="Here's to all the moments we haven't lived yet. ✨"><span>♥</span></button>
+            </div>
+
+            <div class="memory-box" id="memoryBox">Tap a balloon 💕</div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-top-shape"></div>
+            <div class="section-heading dark-heading">
+                <p class="eyebrow dark">Our moments</p>
+                <h2>Our Gallery</h2>
+                <p>Drag to explore our memories ✨</p>
+            </div>
+
+            <div class="gallery-wrap">
+                <button class="gallery-arrow left" onclick="moveGallery(-1)">‹</button>
+                <div class="gallery-track" id="galleryTrack">
+
+                    <article class="photo-card">
+                        <div class="photo photo1">
+                            <div class="photo-placeholder">🌿<br><small>Memory One</small></div>
+                        </div>
+                        <p>“Some days become beautiful because you're in them.”</p>
+                    </article>
+
+                    <article class="photo-card active">
+                        <div class="photo photo2">
+                            <div class="photo-placeholder">🐱<br><small>Memory Two</small></div>
+                        </div>
+                        <p>“A world more beautiful because you're in it.”</p>
+                    </article>
+
+                    <article class="photo-card">
+                        <div class="photo photo3">
+                            <div class="photo-placeholder">🌅<br><small>Memory Three</small></div>
+                        </div>
+                        <p>“Little moments, forever memories.”</p>
+                    </article>
+
+                    <article class="photo-card">
+                        <div class="photo photo4">
+                            <div class="photo-placeholder">🌸<br><small>Memory Four</small></div>
+                        </div>
+                        <p>“Happiness hides in the simplest moments.”</p>
+                    </article>
+
+                    <article class="photo-card">
+                        <div class="photo photo5">
+                            <div class="photo-placeholder">✨<br><small>Memory Five</small></div>
+                        </div>
+                        <p>“And the best chapters are still ahead.”</p>
+                    </article>
+
+                </div>
+                <button class="gallery-arrow right" onclick="moveGallery(1)">›</button>
+            </div>
+            <p class="gallery-hint">Hover a photo to read its story</p>
+        </section>
+
+        <!-- FINAL -->
+        <section class="final-section">
+            <div class="sparkles">✦　✧　✦</div>
+            <h2>One More Wish...</h2>
+            <p>
+                May every tomorrow give you another reason to be proud,
+                another reason to laugh, and another beautiful memory to keep.
+            </p>
+            <button class="main-btn" onclick="celebrate()">Make a Birthday Wish 🎂</button>
+            <p id="final-message" class="final-message"></p>
+        </section>
+    </main>
+
+    <div class="memory-modal" id="memoryModal" aria-hidden="true">
+        <div class="modal-card">
+            <button class="close" onclick="closeWish()">×</button>
+            <div class="cake">🎂</div>
+            <h2>Happy Birthday ❤️</h2>
+            <p>
+                Wishing you a year full of happiness, success, beautiful surprises
+                and memories worth keeping forever.
+            </p>
+            <button class="main-btn" onclick="closeWish()">Thank You ✨</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
